@@ -1,0 +1,55 @@
+#header{
+  height:70px;
+  width:100%;
+/*  background-color:#00CCFF;*/
+}
+
+#fixedHeader{
+  margin:0 auto;
+  height:60px;
+  width:100%;
+  background-color: #BBBBBB;
+/*  background-color:#0066FF;*/
+}
+.headerIcon{
+  float: left;
+  margin: 5px;
+  width: 50px;
+  height:50px;
+}
+
+#logoutIcon{
+  background: url(graphics/power.png) no-repeat;
+}
+#settingsIcon{
+  background: url(graphics/cog.png) no-repeat;
+}
+#profileIcon{
+  text-align:center;
+  width:auto;
+}
+#logo{
+  float:left;
+  width: 75%;
+  text-align:center;
+  font-size: 42pt;
+  text-decoration:none;
+  color:black;
+}
+#friendsIcon{
+  float:right;
+  background: url(graphics/friends.png) no-repeat;
+}
+#tournamentsIcon{
+  float:right;
+  background: url(graphics/bracket.png) no-repeat;
+}
+#homeIcon{
+  float:right;
+  background: url(graphics/home.png) no-repeat;
+}
+#msgIcons{
+  float:right;
+  background: url(graphics/mail.png) no-repeat;
+}
+
