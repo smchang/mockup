@@ -6,7 +6,7 @@
 }
 
 #adminbar{
-  height:100%;
+  height:87%;
   width: 300px;
   border:1px solid black;
   position:absolute;
@@ -15,6 +15,18 @@
   text-decoration:underline;
   text-align:center;
   font-size:18pt;
+}
+#playerList{
+  margin:5px;
+}
+#playerList .admin{
+  background-color: yellow;
+}
+#playerList .booted{
+  background-color:red;
+}
+.player{
+  margin:5px;
 }
 #bar{
   float:right;
@@ -35,4 +47,7 @@
 #bar .collapsed{
   background: url(graphics/expandIcon.png) no-repeat;
 }
-
+#makeAdminBtn{
+  position:absolute;
+  bottom:0;
+}
