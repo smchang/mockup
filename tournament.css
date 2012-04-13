@@ -16,18 +16,27 @@
   text-align:center;
   font-size:18pt;
 }
-#playerList{
+#description{
+  float:left;
+  margin: 5px;
+}
+
+#memberList{
   margin:5px;
 }
-#playerList .admin{
-  background-color: yellow;
+#adminList .player{
+  margin: 5px;
+  background-color: #7EC1FA;
 }
-#playerList .booted{
-  background-color:red;
+#bootedList .player{
+  margin: 5px;
+  background-color:#F07778;
 }
-.player{
+#playerList .player{
   margin:5px;
+  background-color:#89FBBA;
 }
+
 #bar{
   float:right;
   height:100%;
@@ -47,7 +56,16 @@
 #bar .collapsed{
   background: url(graphics/expandIcon.png) no-repeat;
 }
-#makeAdminBtn{
+#buttons{
   position:absolute;
   bottom:0;
+  right:0;
+}
+#makeAdminBtn{
+  float:right;
+  clear:right;
+}
+#bootBtn{
+  float:right;
+  clear:right;
 }

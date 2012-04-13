@@ -1,6 +1,3 @@
-var numAdmins = 1;
-var numBoots = 0;
-
 $(document).ready(function(){
     var sidebar = $('#adminbar');
     $('#bar').click(function(){
@@ -9,21 +6,20 @@ $(document).ready(function(){
 
     $('#makeAdminBtn').click(function(){
         var selected = $('input:checked');
-        var numSelected = selected.length;
         $(selected).each(function(ind, elt){
-            if($(elt).parent().hasClass('admin')){
-                numSelected--;
-            }else{
-                $(elt).parent().addClass('admin');
-            }
+            var player = $(elt).parent();
+            $(player).remove();
+            $('#adminList').append(player);
             elt.checked=false;
         });
-        numAdmins += numSelected;
-        console.log(numAdmins);
-/*        $('#playerList').children().each(function(ind, elt){
-            if(ind<numAdmins){
-                $(elt).addClass('admin');
-            }
-        });*/
     });
+    $('#bootBtn').click(function(){
+        var selected = $('input:checked');
+        $(selected).each(function(ind, elt){
+            var player = $(elt).parent();
+            $('#bootedList').prepend(player);
+            elt.checked=false;
+        });
+    });
+
 });
