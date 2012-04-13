@@ -1,8 +1,5 @@
 $(document).ready(function(){
-/*    $('#adminbar').sidebar({
-        position: "right"
-        });
-        */
+    var sidebar = $('#adminbar');
     $('#expandbar').click(function(){
         console.log('expand/collapse sidebar');
     });

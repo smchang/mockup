@@ -11,17 +11,28 @@
   border:1px solid black;
   position:absolute;
 }
-#expandbar{
+.title{
+  text-decoration:underline;
+  text-align:center;
+  font-size:18pt;
+}
+#bar{
   float:right;
   height:100%;
   width: 15px;
 }
-#expandbar #expandIcon{
+#bar #icon{
   margin: auto;
   position:absolute;
   top: 50%;
   width:15px;
   height:35px;
-  background: url(graphics/unexpandIcon.png) no-repeat;
   background-size:100%;
 }
+#bar .expanded{
+  background: url(graphics/unexpandIcon.png) no-repeat;
+}
+#bar .collapsed{
+  background: url(graphics/expandIcon.png) no-repeat;
+}
+
