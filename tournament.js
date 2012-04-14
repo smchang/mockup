@@ -10,6 +10,7 @@ $(document).ready(function(){
             var player = $(elt).parent();
             $(player).remove();
             $('#adminList').append(player);
+            clickable(player);
             elt.checked=false;
         });
     });
@@ -20,6 +21,23 @@ $(document).ready(function(){
             $('#bootedList').prepend(player);
             elt.checked=false;
         });
+    });
+
+    var clickable = function(elt){
+        $(elt).click(function(){
+            var box = $(elt).children()[0];
+            var checked = box.checked;
+            if(checked){
+                box.checked=false;
+            }else{
+                box.checked=true;
+            }
+        });
+
+    }
+
+    $('.player').each(function(ind, elt){
+        clickable(elt);    
     });
 
 });
