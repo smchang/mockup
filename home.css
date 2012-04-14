@@ -34,3 +34,6 @@
   margin:3px;
   background-color:yellow;
 }
+.closeButton{
+  float:right;
+}
