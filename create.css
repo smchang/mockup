@@ -22,23 +22,27 @@
 
 #name{
   width: 300px;
+  font-size:10pt;
 }
 #password{
   width: 300px;
+  font-size:10pt;
 }
 #description{
   width: 300px;
-  height: 150px;
+  height: 100px;
+  font-size:10pt;
 }
 #type{
   width: 300px;
+  font-size:10pt;
 }
 #preview{
   margin: 5px;
   width: 400px;
   height: 300px;
   border: 2px dotted black;
-  background-size: 400px 300px;
+  background-size:400px 300px;
 }
 
 .members{
