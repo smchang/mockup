@@ -22,6 +22,15 @@
   position:absolute;
   bottom:0;
 }
+#tournaments #createLink .icon{
+  position:absolute;
+  top:0;
+  left:35%;
+  width:45;
+  height:45;
+  background:url(graphics/plus.png) no-repeat;
+  background-size:45 45;
+}
 #tournamentDivider{
   width:100%;
   height:3px;

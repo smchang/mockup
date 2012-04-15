@@ -117,7 +117,7 @@ $(document).ready(function(){
         if(query.split(' ')[0].toLowerCase()==="office"){
             $([1,2,3]).each(function(ind,elt){
                 var link = $('<a>');
-                link.attr('href','roundrobin.html');
+                link.attr('href','joinTournament.html');
                 link.addClass("listingLink");
                 if(ind>0){
                     link.addClass("private");
