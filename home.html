@@ -26,17 +26,36 @@
     <div id="content">
       <div id="tournaments">
         <div class="subheader">
-          <div class="title">Tournaments</div>
+          Tournaments
+          <!--          <div class="title">Tournaments</div>--!>
+          <input id='search'></input>
         </div>
         <div id="yourTournaments">
-          <div class="tournament listing">Your Tournament 1</div>
-          <div class="tournament listing">Your Tournament 2</div>
-          <div class="tournament listing">Your Tournament 3</div>
+          <div id="yourResults" class="results"></div>
+          <a href="soccer.html" name="soccer" class="listingLink">
+            <div class="tournament listing">
+              <div id="icon1" class='icon'></div>
+              <div>Soccer Tournament</div>
+            </div>
+          </a>
+          <a href="chess.html" name="chess" class="listingLink">
+            <div class="tournament listing">
+              <div id="icon2" class='icon'></div>
+              Chess Tournament
+            </div>
+          </a>
+          <a href="funfun.html" name="funfun" class="listingLink">
+            <div class="tournament listing">
+              <div id="icon3" class='icon'></div>
+                FunFun
+            </div>
+          </a>
         </div>
+        <div id="tournamentDivider"></div>
         <div id="allTournaments">
-          <div class="tournament listing">Global Tournament 1</div>
+          <div id="globalResults" class="results"></div>
         </div>
-        <a id="createLink" href="createTournament.html">Create Tournament</a>
+        <a id="createLink" href="createTournament.html"><div>Create Tournament</div></a>
       </div>
       <div id="contentDivider"></div>
       <div id="notifications">
@@ -44,7 +63,13 @@
           <div class="title">Notifications</div>
         </div>
         <div id="notes">
-          <div class="note listing">Notification 1</div>
+          <div class="note listing">
+            <div class='title'>Game Completed</div>
+            You vs. Moe <br />
+            3:5
+            <button class='button accept'>Accept</button>
+            <button class='button reject'>Reject</button>
+          </div>
         </div>
       </div>
     </div>

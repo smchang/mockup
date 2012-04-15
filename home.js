@@ -14,4 +14,16 @@ $(document).ready(function(){
     });
     
     $('#createLink').button();
+
+    $('.listing .button').click(function(){
+        $(this).parent().remove();
+    });
+
+    var showSearchResults = function(query){
+        $('#yourTournaments').children().each(function(ind, elt){
+            if(ind!=0 && $(elt).attr("name")!=query){
+                $(elt).remove();
+            }
+        });
+    }    
 });

@@ -69,3 +69,9 @@
   float:right;
   clear:right;
 }
+
+#bracket{
+  width:900px;
+  height:900px;
+  margin:auto;
+}

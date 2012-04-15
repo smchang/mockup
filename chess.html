@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <title>BrackeTracker - Home</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="stylesheet" type="text/css" href="tournament.css" />
+    <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" media="all" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="sideroad-jquery.sidebar/src/jquery.sidebar.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="tournament.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('#bracket').css('background','url(graphics/singleElim.png) no-repeat');
+        $('#bracket').css('background-size','900px 900px');
+      });
+    </script>
+
+  </head>
+
+  <body>
+    <div id="header">
+      <div id="fixedHeader">
+        <a id="logoutIcon" class="headerIcon"></a>
+        <a id="settingsIcon" href="settings.html" class="headerIcon"></a>
+        <a id="profileIcon" href="profile.html" class="headerIcon">Larry</a>
+        <a id="logo" href="home.html">BrackeTracker</a>
+
+        <a id="homeIcon" href="home.html" class="headerIcon"></a>
+        <a id="friendsIcon" href="friends.html" class="headerIcon"></a>
+      </div>
+    </div>
+
+    <div id="tournament">
+      <div id="adminbar">
+        <div class="title">Chess Tournament</div>
+        <div id="description">Description: My King's Gambit wins every time</div>
+        <div id="memberList">
+          Players:
+          <br />
+          <div id="adminList">
+            <div class="player"><input type="checkbox" name="player" value="Larry" />Larry</div>
+          </div>
+          <div id="playerList">
+            <div class="player"><input type="checkbox" name="player" value="Larry" />Moe</div>
+            <div class="player"><input type="checkbox" name="player" value="Curly" />Curly</div>
+            <div class="player"><input type="checkbox" name="player" value="Adam" />Adam</div>
+            <div class="player"><input type="checkbox" name="player" value="Billy" />Billy</div>
+            <div class="player"><input type="checkbox" name="player" value="Larry" />Carl</div>
+            <div class="player"><input type="checkbox" name="player" value="Dave" />Dave</div>
+            <div class="player"><input type="checkbox" name="player" value="Eric" />Eric</div>
+            <div class="player"><input type="checkbox" name="player" value="Fred" />Fred</div>
+          </div>
+          <div id="bootedList">
+            <div class="player"><input type="checkbox" name="player" value="George" />George</div>
+          </div>
+        </div>
+        <div id="bar" class="expanded">
+          <div id="icon" class="expanded"></div>
+        </div>
+        <div id="buttons">
+          <button id="makeAdminBtn" type="button">Make Admin</button>
+          <button id="bootBtn" type="button">Boot Player</button>
+        </div>
+
+      </div>
+      <div id="bracket">
+      </div>
+    </div>
+  </body>
+</html>
