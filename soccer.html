@@ -12,7 +12,7 @@
     <script>
       $(document).ready(function(){
         $('#bracket').css('background','url(graphics/doubleElim.png) no-repeat');
-        $('#bracket').css('background-size','900px 900px');
+        $('#bracket').css('background-size','800px 800px');
       });
     </script>
 
@@ -32,7 +32,11 @@
     </div>
 
     <div id="tournament">
+      <div id="expandBar"><div class="icon"></div></div>
       <div id="adminbar">
+        <div id="bar" class="expanded">
+          <div id="icon" class="expanded"></div>
+        </div>
         <div class="title">Soccer Tournament</div>
         <div id="description">Description: Your local soccer tournament.  No further description needed</div>
         <div id="memberList">
@@ -54,9 +58,6 @@
           <div id="bootedList">
             <div class="player"><input type="checkbox" name="player" value="George" />George</div>
           </div>
-        </div>
-        <div id="bar" class="expanded">
-          <div id="icon" class="expanded"></div>
         </div>
         <div id="buttons">
           <button id="makeAdminBtn" type="button">Make Admin</button>
