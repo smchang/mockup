@@ -22,9 +22,11 @@
   background: url(graphics/power.png) no-repeat;
 }
 #settingsIcon{
+  float:right;
   background: url(graphics/cog.png) no-repeat;
 }
 #profileIcon{
+  float:right;
   text-align:center;
   width:auto;
 }
@@ -37,7 +39,7 @@
   color:black;
 }
 #friendsIcon{
-  float:right;
+  float:left;
   background: url(graphics/friends.png) no-repeat;
 }
 #tournamentsIcon{
@@ -45,7 +47,7 @@
   background: url(graphics/bracket.png) no-repeat;
 }
 #homeIcon{
-  float:right;
+  float:left;
   background: url(graphics/home.png) no-repeat;
 }
 #msgIcons{
