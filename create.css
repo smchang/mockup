@@ -24,8 +24,15 @@
   width: 300px;
   font-size:10pt;
 }
+#passwordDiv{
+  font-size:10pt;
+  display:none;
+}
 #password{
   width: 300px;
+  font-size:10pt;
+}
+#scope{
   font-size:10pt;
 }
 #description{

@@ -23,6 +23,13 @@ var showTournament = function(name, global, isPrivate){
     tempListing.append(displayName+" Tournament");
     link.append(tempListing);
 
+    if(isPrivate){
+        link.click(function(evt){
+            evt.preventDefault();
+           $('#passwordPrompt').dialog('open');
+        });
+    }
+
     if(global) $('#allTournaments').append(link);
     else $('#yourTournaments').append(link);
 
@@ -50,6 +57,9 @@ $(document).ready(function(){
 
     $('.listing .button').click(function(){
         $(this).parent().remove();
+        if($('#notes').children().length==0){
+            $('#notes').text("No new notifications");
+        }
     });
 
     $('#searchIcon').button();
@@ -81,10 +91,9 @@ $(document).ready(function(){
                 }
         },
         close:function(){
-                  $('#inviteError').css('visibility','hidden');
-              }
-    });
-
+                  $('#promptError').css('visibility','hidden');
+              } 
+    }); 
     var showSearchResults = function(query){
         if(query.trim()===""){
             $('#yourTournaments').text("Your Tournaments:");
@@ -108,7 +117,7 @@ $(document).ready(function(){
         if(query.split(' ')[0].toLowerCase()==="office"){
             $([1,2,3]).each(function(ind,elt){
                 var link = $('<a>');
-                link.attr('href','roundrobin.html');
+                link.attr('href','joinTournament.html');
                 link.addClass("listingLink");
                 if(ind>0){
                     link.addClass("private");

@@ -1,4 +1,12 @@
 $(document).ready(function(){
+    $('#tournamentScope').change(function(){
+        if($("input:radio[name='scope']:checked").val()=='private'){
+            $('#passwordDiv').css('display','block');
+        }
+        else{
+            $('#passwordDiv').css('display','none');
+        }
+    });
     $('#type').change(function(){
         var type = $('#type option:selected').val();
         if(type==='singleElim'){
