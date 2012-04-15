@@ -25,6 +25,7 @@ $(document).ready(function(){
 
     var clickable = function(elt){
         $(elt).click(function(){
+            console.log("div clicked");
             var box = $(elt).children()[0];
             var checked = box.checked;
             if(checked){
@@ -35,6 +36,11 @@ $(document).ready(function(){
         });
 
     }
+    
+    $('input').click(function(evt){
+        console.log('input click');
+        evt.stopPropagation();
+    });
 
     $('.player').each(function(ind, elt){
         clickable(elt);    
