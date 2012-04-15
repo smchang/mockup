@@ -1,4 +1,5 @@
 var yourTournaments = ['soccer','chess','funfun'];
+var queryString = "";
 
 var showTournament = function(name, global, isPrivate){
     var displayName = name;
@@ -53,9 +54,14 @@ $(document).ready(function(){
 
     $('#searchIcon').button();
     $('#search').keypress(function(evt){
+        console.log(evt);
         if(evt.which==13){
             showSearchResults($('#search').val());
         }
+    });
+    $('#search').change(function(){
+        console.log('changed');
+        console.log($('#search').val());
     });
     $('#searchIcon').click(function(){
         showSearchResults($('#search').val());
@@ -81,7 +87,7 @@ $(document).ready(function(){
 
     var showSearchResults = function(query){
         if(query.trim()===""){
-            $('#yourTournaments').text("");
+            $('#yourTournaments').text("Your Tournaments:");
             $('#yourTournaments').children().remove();
             $('#allTournaments').children().remove();
             $(yourTournaments).each(function(ind, elt){
@@ -92,7 +98,7 @@ $(document).ready(function(){
         $('#yourTournaments').children().remove();
         $('#yourTournaments').text("Your Tournaments: ");
         $(yourTournaments).each(function(ind, elt){
-            if(elt.toLowerCase()==query.toLowerCase()){
+            if(elt.toLowerCase()==query.toLowerCase() || elt.toLowerCase().indexOf(query.toLowerCase())!=-1){
                 showTournament(elt,false);
             }
         });
