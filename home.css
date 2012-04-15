@@ -35,7 +35,7 @@
 }
 
 .subheader{
-  height:25pt;
+  height:30px;
   text-align:center;
   font-size:20pt;
 }
@@ -48,6 +48,14 @@
   margin:4px;
   height:80%;
   width:250px;
+}
+#searchIcon{
+  float:right;
+  margin:4px;
+  width:25px;
+  height:25px;
+  background:url(graphics/searchIcon.png) no-repeat;
+  background-size:25 25;
 }
 
 .listing{
@@ -88,4 +96,19 @@
 }#icon3{
   background:url(graphics/grid.png) no-repeat;
   background-size:75px 75px;
+}
+#officeIcon1{
+  background:url(graphics/grid.png) no-repeat;
+  background-size:75px 75px;
+}#officeIcon2{
+  background:url(graphics/grid.png) no-repeat;
+  background-size:75px 75px;
+}#officeIcon3{
+  background:url(graphics/grid.png) no-repeat;
+  background-size:75px 75px;
+}
+
+
+.results{
+  margin:5px;
 }
