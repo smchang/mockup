@@ -1,4 +1,36 @@
+var yourTournaments = ['soccer','chess','funfun'];
+
+var showTournament = function(name, global, isPrivate){
+    var displayName = name;
+    name = name.toLowerCase();
+    if(name=="soccer") displayName="Soccer";
+    else if(name=="chess") displayName="Chess";
+    else if(name=="funfun") displayName="FunFun";
+ 
+    var link = $('<a>');
+    link.attr('href',name+'.html');
+    link.attr('name',name);
+    link.addClass("listingLink");
+    if(isPrivate) link.addClass("private");
+    var tempListing = $('<div>');
+    tempListing.addClass('tournament');
+    tempListing.addClass('listing');
+    var tempInfo = $('<div>');
+    tempInfo.attr('id',name+"Icon");
+    tempInfo.addClass("icon");
+    tempListing.append(tempInfo);
+    tempListing.append(displayName+" Tournament");
+    link.append(tempListing);
+
+    if(global) $('#allTournaments').append(link);
+    else $('#yourTournaments').append(link);
+
+}
+
 $(document).ready(function(){
+    showTournament("soccer",false);
+    showTournament("chess",false);
+    showTournament("funfun",false);
     var makeCloseable = function(listing){
         var closeButton = $('<button>');
         closeButton.addClass('closeButton');
@@ -48,19 +80,29 @@ $(document).ready(function(){
     });
 
     var showSearchResults = function(query){
-        $('#yourResults').append("Your Tournaments:\<br/\>");
-        $('#yourTournaments').children().each(function(ind, elt){
-            if(ind!=0 && $(elt).attr("name")!=query){
-                $(elt).remove();
+        if(query.trim()===""){
+            $('#yourTournaments').text("");
+            $('#yourTournaments').children().remove();
+            $('#allTournaments').children().remove();
+            $(yourTournaments).each(function(ind, elt){
+                showTournament(elt,false, false);
+            });
+            return;
+        }
+        $('#yourTournaments').children().remove();
+        $('#yourTournaments').text("Your Tournaments: ");
+        $(yourTournaments).each(function(ind, elt){
+            if(elt.toLowerCase()==query.toLowerCase()){
+                showTournament(elt,false);
             }
         });
-        if($('#yourTournaments').children().length==1){
-            $('#yourResults').append('No matches for "'+query+'" in your tournaments');
-        }
-        $('#globalResults').append("All Tournaments:\<br/\>");
+        if($('#yourTournaments').children().length==0)    
+            $('#yourTournaments').append('No matches for "'+query+'" in your tournaments');
+        $('#allTournaments').text("All Tournaments:");
         if(query.split(' ')[0].toLowerCase()==="office"){
             $([1,2,3]).each(function(ind,elt){
-                var link = $('<a href="roundrobin.html">');
+                var link = $('<a>');
+                link.attr('href','roundrobin.html');
                 link.addClass("listingLink");
                 if(ind>0){
                     link.addClass("private");
@@ -83,6 +125,10 @@ $(document).ready(function(){
                     });
                 }
             });
+        }else{
+            showTournament(query+' 1',true,true);
+            showTournament(query+' 2',true,true);
+            showTournament(query+' 3',true,true);
         }
     }    
 });

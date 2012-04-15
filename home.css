@@ -92,13 +92,13 @@
   height:75px;
   background-color:white;
 }
-#icon1{
+#soccerIcon{
   background:url(graphics/doubleElim.png) no-repeat;
   background-size:75px 75px;
-}#icon2{
+}#chessIcon{
   background:url(graphics/singleElim.png) no-repeat;
   background-size:75px 75px;
-}#icon3{
+}#funfunIcon{
   background:url(graphics/grid.png) no-repeat;
   background-size:75px 75px;
 }
