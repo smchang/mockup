@@ -6,10 +6,12 @@ $(document).ready(function(){
         $(listing).append(closeButton);
     }
     $('.listing').each(function(ind, elt){
-        makeCloseable(elt);
+//        makeCloseable(elt);
     });
 
     $('.closeButton').click(function(){
         $(this).parent().remove();
     });
+    
+    $('#createLink').button();
 });

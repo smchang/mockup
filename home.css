@@ -8,6 +8,15 @@
   width:64.33%;
   height:100%;
 }
+#tournaments #createLink{
+  text-align:center;
+  width:63.5%;
+  height:50px;
+  position:absolute;
+  bottom:0;
+  font-size:20px;
+}
+
 #contentDivider{
   float:left;
   width:0.33%;
