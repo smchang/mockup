@@ -26,6 +26,7 @@
   
     <div id="inviteForm" title="Invite Participants to Tournament">
       <form>
+        <div id="inviteError">Nobody to invite</div>
         <div id="inviteUsers">
           <textarea id="users" name="users"></textarea>
         </div>
@@ -38,7 +39,6 @@
     <div id="create">
       <div id="left" class="panel">
         <div class="title">Tournament Info</div>
-        <form id="info">
           <label for="name">Tournament Name*:</label>
           <br />
           <input id="name" name="name" />
@@ -63,10 +63,11 @@
           Preview:
           <div id="preview"></div>
           <br />
-          <input type="submit" id="createBtn" value="Create" name="create" />
+          <div id="createStatus">Tournament Created</div>
+          <br />
+          <button id="inviteBtn">Invite Members</button>
+          <button id="createBtn">Create</button> 
 
-        </form>
-        <div id="inviteBtn">Invite Members</div>
       </div>
       <div id="right" class="panel">
         <div class='title'>Tournament Members</div>

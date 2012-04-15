@@ -48,6 +48,12 @@
   border:2px solid black;
 }
 
+#inviteError{
+  text-align:center;
+  color:red;
+  visibility:hidden;
+}
+
 #inviteUsers{
   float:left;
   margin: 5px;
@@ -69,4 +75,8 @@
   width:100%;
   height:100%;
   resize:none;
+}
+
+#createStatus{
+  visibility:hidden;
 }
