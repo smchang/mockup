@@ -19,7 +19,7 @@ body {
 }
 #leftMenu{
 	position: absolute;
-	left: 0px;
+	left: 10px;
 	top: 0px;
 }
 #centerMenu{
@@ -30,7 +30,7 @@ body {
 }
 #rightMenu{
 	position: absolute;
-	right:0px;
+	right:10px;
 	top: 0px;
 }
 

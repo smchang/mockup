@@ -3,12 +3,27 @@
   color:red;
 }
 
-#content{
-  width:100%;
-  height:90%;
-  background-color: #BBBBBB;
+#contentBox{
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	top: 50px;
+	width: 100%;
+	margin-bottom: 0px;
+	margin-top: auto;
+	bottom: 0px;
+	background-color: #FFCD03;
 }
+#content {
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+}
+	
+
 #tournaments{
+	background-color: rgba(21,21,21,0.5);
   position:relative;
   float:left;
   width:64.33%;
@@ -34,16 +49,15 @@
 #tournamentDivider{
   width:100%;
   height:3px;
-  background-color:black;
 }
 
 #contentDivider{
   float:left;
   width:0.33%;
   height:100%;
-  background-color:black;
 }
 #notifications{
+	background-color: rgba(21,21,21,0.5);
   float:left;
   width:35.33%;
   height:100%;
