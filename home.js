@@ -1,4 +1,4 @@
-var yourTournaments = ['soccer','chess','funfun'];
+var yourTournaments = ['soccer','chess','funfun', 'round robin'];
 var queryString = "";
 
 var showTournament = function(name, global, isPrivate){
@@ -7,6 +7,10 @@ var showTournament = function(name, global, isPrivate){
     if(name=="soccer") displayName="Soccer";
     else if(name=="chess") displayName="Chess";
     else if(name=="funfun") displayName="FunFun";
+    else if(name=='round robin'){
+        name='roundrobin';
+        displayName="Round Robin";
+    }
  
     var link = $('<a>');
     link.attr('href',name+'.html');
@@ -36,6 +40,7 @@ var showTournament = function(name, global, isPrivate){
 }
 
 $(document).ready(function(){
+    showTournament("round robin", false);
     showTournament("soccer",false);
     showTournament("chess",false);
     showTournament("funfun",false);
