@@ -1,3 +1,10 @@
+@font-face {
+	font-family: BebasNeue;
+	src: url(graphics/BebasNeue.otf);
+	font-family: CenturyGothic;
+	src: url(graphics/GOTHIC.TTF);
+}
+
 body {
 	margin: 0px;
 	background-color: #FFCD03;
