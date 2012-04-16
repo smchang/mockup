@@ -1,9 +1,16 @@
 .invalid{
-  background-color:#444444;
+  background-color:#444400 !important;
 }
 .box{
   position:relative;
   float:left;
+  background-color:rgba(21,21,21,0.2);
+}
+.valid {
+  background-color: rgba(255,203,3,0);
+}
+.valid:hover{
+  background-color: rgba(255,203,3,1) !important;
 }
 .box .content{
   font-weight:bold;
