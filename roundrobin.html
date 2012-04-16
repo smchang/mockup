@@ -3,6 +3,7 @@
     <title>BrackeTracker - Home</title>
     <link rel="stylesheet" type="text/css" href="main.css" />
     <link rel="stylesheet" type="text/css" href="tournament.css" />
+    <link rel="stylesheet" type="text/css" href="roundrobin.css" />
     <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" media="all" />
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
@@ -20,6 +21,37 @@
         <a id="logo" href="home.html">BrackeTracker</a>
         <a id="settingsIcon" href="settings.html" class="headerIcon"></a>
         <a id="profileIcon" href="profile.html" class="headerIcon">Larry</a>
+      </div>
+    </div>
+
+    <div id="scorePrompt" title="Enter Outcome">
+      <div id="players">
+        <div class="smallTitle">
+          Players:
+        </div>
+        <div id="you">You</div>
+        vs.
+        <div id="opponent"></div>
+      </div>
+      <div id="outcome">
+        <div class="smallTitle">
+          Winner:
+        </div>
+        <form id="winner">
+          <input type="radio" name="winner" value="you"></input>
+          <br />
+          <br />
+          <input type="radio" name="winner" value="opp"></input>
+        </form>
+      </div>
+      <div id="score">
+        <div class="smallTitle">
+          Score:
+        </div>
+        <input type="text" id="yourScore" class="scoreInput"></input>
+        <br />
+        <br />
+        <input type="text" id="oppScore" class="scoreInput"></input>
       </div>
     </div>
 
@@ -44,10 +76,10 @@
               <div class="player"><input type="checkbox" name="player" value="Billy" />Billy</div>
               <div class="player"><input type="checkbox" name="player" value="Larry" />Carl</div>
               <div class="player"><input type="checkbox" name="player" value="Dave" />Dave</div>
-              <div class="player"><input type="checkbox" name="player" value="Eric" />Eric</div>
-              <div class="player"><input type="checkbox" name="player" value="Fred" />Fred</div>
             </div>
             <div id="bootedList">
+              <div class="player"><input type="checkbox" name="player" value="Eric" />Eric</div>
+              <div class="player"><input type="checkbox" name="player" value="Fred" />Fred</div>
               <div class="player"><input type="checkbox" name="player" value="George" />George</div>
             </div>
           </div>

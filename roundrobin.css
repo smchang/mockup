@@ -1,0 +1,52 @@
+.invalid{
+  background-color:#444444;
+}
+.box{
+  position:relative;
+  float:left;
+}
+.box .content{
+  font-weight:bold;
+  text-align:center;
+  margin: 0 auto; 
+}
+.box .name{
+
+}
+.box .score{
+
+}
+.win{
+  background-color:#7DD46E;
+}
+.loss{
+  background-color:#C24444;
+}
+
+#scorePrompt #players{
+  float:left;
+  width:33%;
+  height:100%;
+}
+#scorePrompt #players #you{
+  width:100%;
+}
+#scorePrompt #players #opponent{
+  width:100%;
+}
+#scorePrompt #outcome{
+  float:left;
+  width:32%;
+  height:100%;
+}
+#scorePrompt #score{
+  float:left;
+  width:32%;
+  height:100%;
+}
+.scoreInput{
+  width:50px;
+}
+.smallTitle{
+  text-decoration:underline;
+}
