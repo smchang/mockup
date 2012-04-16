@@ -6,22 +6,36 @@ body {
 #header{
 	top: 0px;
 	left: 0px;
-	height:70px;
+	height:50px;
 	width:100%;
 	background-color:#151515;
 }
 
-#fixedHeader{
-	margin:0 auto;
-	height:60px;
-	width:100%;
-	background-color:#151515;
+#menubar {
+	position: absolute;
+	top: 10px;
+	height: 30px;
+	width: 100%;
 }
-#fixedHeader div {
-	display: inline;
-	
+#leftMenu{
+	position: absolute;
+	left: 0px;
+	top: 0px;
 }
+#centerMenu{
+	margin-left: auto;
+	margin-right: auto;
+	width: 191px;
+	height: 30px;
+}
+#rightMenu{
+	position: absolute;
+	right:0px;
+	top: 0px;
+}
+
 .menubarIcon{
+	display: inline;
 	opacity: 0.55;
 	-moz-opacity: 0.55;
 	filter:alpha(opacity=55);
@@ -40,16 +54,11 @@ body {
 #profileIcon{
 }
 #logo{
-	margin-left: auto;
-	margin-right: auto;
-	width: 191px;
 }
 #friendsIcon{
 }
 #tournamentsIcon{
 }
 #homeIcon{
-}
-#msgIcons{
 }
 
