@@ -26,7 +26,7 @@
 #scorePrompt #players{
   float:left;
   width:33%;
-  height:100%;
+  height:85%;
 }
 #scorePrompt #players #you{
   width:100%;
@@ -37,12 +37,20 @@
 #scorePrompt #outcome{
   float:left;
   width:32%;
-  height:100%;
+  height:85%;
 }
 #scorePrompt #score{
   float:left;
   width:32%;
-  height:100%;
+  height:85%;
+}
+#scoreError{
+  visibility:hidden;
+  position:absolute;
+  width:90%;
+  height:10%;
+  color:red;
+  bottom:5;
 }
 .scoreInput{
   width:50px;

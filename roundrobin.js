@@ -56,7 +56,9 @@ var makeRoundRobin = function(w,h, numPlayers){
     $("#tournament").append(grid);
 }
 
-var addWin = function(wins){//takes a list of indexes
+var addWin = function(wins, score1, score2){//takes a list of indexes
+    score1 = score1||'--';
+    score2 = score2||'--';
     $(wins).each(function(ind, elt){
         var xy = getXYfromIndex(elt);
         var eltOpp = getIndexFromXY(xy[1],xy[0]);
@@ -66,10 +68,13 @@ var addWin = function(wins){//takes a list of indexes
         $(box).addClass("win");
         $(boxOpp).removeClass('valid');
         $(boxOpp).addClass('loss');
-
+        $(box).text(score1+':'+score2);
+        $(boxOpp).text(score2+':'+score1);
     });
 }
-var addLoss = function(losses){//takes a list of indexes
+var addLoss = function(losses, score1, score2){//takes a list of indexes
+    score1 = score1||'--';
+    score2 = score2||'--';
     $(losses).each(function(ind, elt){
         var xy = getXYfromIndex(elt);
         var eltOpp = getIndexFromXY(xy[1],xy[0]);
@@ -79,6 +84,9 @@ var addLoss = function(losses){//takes a list of indexes
         $(box).addClass("loss");
         $(boxOpp).removeClass('valid');
         $(boxOpp).addClass('win');
+
+        $(box).text(score1+':'+score2);
+        $(boxOpp).text(score2+':'+score1);
     });
 }
 
@@ -121,23 +129,28 @@ $(document).ready(function(){
         buttons:{
             "Submit":function(){
                   var checked = $('input:radio[name="winner"]:checked');
+                  var yourScore = $('#yourScore').val()||'--';
+                  var oppScore = $('#oppScore').val()||'--';
                   if(checked.length>0){
                       if(checked.val()=="you"){
                           if(updatingXY[0]<updatingXY[1]){
-                            addLoss(updatingIndex);
+                            addLoss(updatingIndex, yourScore, oppScore);
                           }else{
-                              addWin(updatingIndex);
+                            addWin(updatingIndex, yourScore, oppScore);
                           }
                       }
                       else{
                           if(updatingXY[0]<updatingXY[1]){
-                            addWin(updatingIndex);
+                            addWin(updatingIndex, yourScore, oppScore);
                           }else{
-                              addLoss(updatingIndex);
+                              addLoss(updatingIndex, yourScore, oppScore);
                           }
                       }
-                  }
                   $(this).dialog('close');
+                  }
+                  else{
+                     $('#scoreError').css('visibility','visible'); 
+                  }
             },
         Cancel: function(){
                     $(this).dialog('close');
@@ -148,6 +161,7 @@ $(document).ready(function(){
                 if(check.length>0){
                     check[0].checked=false;
                 }
+                $('#scoreError').css('visibility','hidden');
               }
         });
     $('.box').click(function(){
@@ -161,8 +175,8 @@ $(document).ready(function(){
         }
     });
 
-    addWin([19,21,22,41,43,61,25]);
-    addLoss([62,37,38,39,33]);
+    addWin([21,25], 21, 4);
+    addLoss([62,37], 7, 21);
 
 
 });
