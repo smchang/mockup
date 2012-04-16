@@ -48,6 +48,12 @@ body {
 }
 
 #logoutIcon{
+	height: 0px;
+	width: 0px;
+}
+#logoutIcon img{
+	height: 0px;
+	width: 0px;
 }
 #settingsIcon{
 }

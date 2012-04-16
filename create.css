@@ -1,23 +1,53 @@
+@font-face {
+	font-family: BebasNeue;
+	src: url(graphics/BebasNeue.otf);
+	font-family: CenturyGothic;
+	src: url(graphics/GOTHIC.ttf);
+}
+
+#contentBox{
+	color: #FFFFFF;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	top: 50px;
+	width: 100%;
+	margin-bottom: 0px;
+	margin-top: auto;
+	bottom: 0px;
+	background-color: #FFCD03;
+	font-family: CenturyGothic;	
+}
+
 #create{
-  margin: 0 auto;
-  width: 1300px;
-  height: 800px;
-  background-color:#BBBBBB;
+  height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+}
+
+#contentDivider{
+  float:left;
+  width:0.33%;
+  height:100%;
 }
 
 #create .panel{ 
+background-color: rgba(21,21,21,0.5);
   float: left;
-  margin: 1px;
-  width: 645px;
-  height: 796px;
-  border: 1px solid black;
+  width: 49.33%;
+  height: 100%;
+	
+}
+#create .panel *{ 
+margin-left: 10px;
+	
 }
 
 .title{
   margin: 5px;
-  text-align:center;
-  text-decoration: underline;
-  font-size: 20px;
+  font-size: 30pt;
+  font-family: BebasNeue;
 }
 
 #name{
@@ -53,10 +83,14 @@
 }
 
 .members{
-  margin: 0 auto;
-  height: 700px;
-  width: 550px;
-  border:2px solid black;
+  margin-left: 0px;
+  margin-right: 10px;
+  height: 90%;
+  background-color: rgba(255,203,3,0.1);
+  color: #FFFFFF;
+}
+.members *{
+  color: #FFFFFF;
 }
 
 #inviteError{
